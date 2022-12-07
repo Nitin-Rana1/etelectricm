@@ -1,5 +1,5 @@
 import { Button, Slider } from "@mui/material";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image"
 function ScooterCard({side, pic, title, des, link}:{side: number, pic: string, title: string, des: string, link: string}){
@@ -40,12 +40,12 @@ export default function Scooter() {
       <h2>Choose Your Requirement</h2>
         <div>Select Range: {range}</div>
         <Slider
-          aria-label="Small steps"  value={range} onChange={e=> setRange(e.target?.value)} step={10} marks    min={0}
+          aria-label="Small steps"  value={range} onChange={(e, newValue)=> {if (typeof newValue == "number") setRange(newValue)}} step={10} marks    min={0}
           max={150}  valueLabelDisplay="auto"
         />
         <div>Daily Use Km: {km}</div>
         <Slider
-          aria-label="Small steps"  value={km} onChange={e=> setKm(e.target?.value)} step={10} marks    min={0}
+          aria-label="Small steps"  value={km} onChange={(e, newValue)=> {if (typeof newValue == "number") setKm(newValue)}} step={10} marks    min={0}
           max={150}  valueLabelDisplay="auto"
         />
       </section>
