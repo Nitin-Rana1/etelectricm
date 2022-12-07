@@ -1,5 +1,6 @@
 html,
 body {
+    scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -10,17 +11,19 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+main{
+  overflow: hidden;
+}
 * {
   box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+  /* html {
     color-scheme: dark;
   }
   body {
     color: white;
     background: black;
-  }
+  } */
 }
