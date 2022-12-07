@@ -36,7 +36,7 @@ export default function Scooter() {
     <main className={styles.scooter}>
       <section className={styles.ranges}>
       <h1>SCOOTER</h1>
-      <h4>Taggy line</h4>
+      <h4>TAGGY  line</h4>
       <h2>Choose Your Requirement</h2>
         <div>Select Range: {range}</div>
         <Slider
