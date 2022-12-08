@@ -47,7 +47,7 @@ export default function PopUp() {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>"Future Contact US Page"</DialogTitle>
+        <DialogTitle>Future Contact US Page </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti facere perferendis autem quibusdam ea odio numquam pariatur aut reprehenderit, nulla, a et nesciunt corrupti veritatis officiis, placeat omnis. Corrupti, possimus.
