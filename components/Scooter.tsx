@@ -30,7 +30,6 @@ function ScooterCard({side, pic, title, des, link}:{side: number, pic: string, t
 }
 
 export default function Scooter() {
-    const [range, setRange] = useState(10);
     const [km, setKm] = useState(10);
   return (
     <main className={styles.scooter}>
@@ -38,11 +37,6 @@ export default function Scooter() {
       <h1>SCOOTER</h1>
       <h4>TAGGY  line</h4>
       <h2>Choose Your Requirement</h2>
-        <div>Select Range: {range}</div>
-        <Slider
-          aria-label="Small steps"  value={range} onChange={(e, newValue)=> {if (typeof newValue == "number") setRange(newValue)}} step={10} marks    min={0}
-          max={150}  valueLabelDisplay="auto"
-        />
         <div>Daily Use Km: {km}</div>
         <Slider
           aria-label="Small steps"  value={km} onChange={(e, newValue)=> {if (typeof newValue == "number") setKm(newValue)}} step={10} marks    min={0}
@@ -50,10 +44,10 @@ export default function Scooter() {
         />
       </section>
       <section>
-        <ScooterCard side={0} pic="/img/ev1.jpg" link="none" title="Scooty Name" des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"/>
-        <ScooterCard side={1} pic="/img/ev2.jpg" link="none" title="Scooty Name" des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"/>
-        <ScooterCard side={0} pic="/img/ev2.jpg" link="none" title="Scooty Name" des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"/>
-        <ScooterCard side={1} pic="/img/ev1.jpg" link="none" title="Scooty Name" des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"/>
+        <ScooterCard side={0} pic="/scooty/s1.png" link="none" title="Scooty Name" des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"/>
+        <ScooterCard side={1} pic="/scooty/s1.png" link="none" title="Scooty Name" des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"/>
+        <ScooterCard side={0} pic="/scooty/s1.png" link="none" title="Scooty Name" des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"/>
+        <ScooterCard side={1} pic="/scooty/s1.png" link="none" title="Scooty Name" des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"/>
       </section>
     </main>
   );
