@@ -4,6 +4,11 @@
   height: 100vh;
   text-align: center;
   position: relative;
+  .carousel{
+    background-color: red;
+    height: 100vh;
+    position: relative;
+  }
   .pic{
     object-fit: cover;
   }

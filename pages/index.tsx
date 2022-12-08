@@ -2,6 +2,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Carousel } from "react-responsive-carousel";
 import Bike from "../components/Bike";
 import ChooseEV from "../components/chooseEV";
 import LandingFace from "../components/landingFace";
