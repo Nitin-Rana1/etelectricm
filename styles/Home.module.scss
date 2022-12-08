@@ -70,11 +70,11 @@
     }
   }
 }
-.scooter{
+.scooter, .bike{
   .ranges{
     padding: 0 8vw;
   }
-  .scooterCard{
+  .scooterCard,.bikeCard{
     display: flex;
     .even,.odd{
       // background-color: coral;
@@ -100,46 +100,8 @@
     }
     .imgHolder{
       position: relative;
-      min-width: 50vw;
-      min-height: 50vw;
-      // border-radius: 150px;
-      overflow: hidden;
-    }
-  }
-}
-.bike{
-  .ranges{
-    padding: 0 8vw;
-  }
-  .bikeCard{
-    display: flex;
-    .even,.odd{
-      // background-color: coral;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .even{
-      text-align: start;
-    }
-    .odd{
-      // p{
-        text-align: end;
-      // }
-    }
-    article{
-      padding: 0 4vw;
-      Button{
-        font-size: 0.7em;
-        font-weight: bold;
-      }
-    }
-    .imgHolder{
-      position: relative;
-      min-width: 50vw;
-      min-height: 50vw;
-      // border-radius: 150px;
+      min-height: min(35vw, 90vh);
+      min-width: min(35vw, 90vh);
       overflow: hidden;
     }
   }
@@ -165,8 +127,6 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .landingFace {
-  background-image: url("/landing/ev2.png");
-  // background-repeat: no-repeat;
   }
   .chooseEv{
     .bikeOrScooty{
@@ -179,6 +139,9 @@
       height: 35vw;
       }
     }
+  }
+  .scooter, .bike{
+
   }
 }
 
