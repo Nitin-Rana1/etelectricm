@@ -25,7 +25,7 @@ function ScooterCard({side, pic, title, des, link}:{side: number, pic: string, t
             (<article className={styles.even}>
                 <h2>{title}</h2>
                 <p>{des}</p>
-                <Button variant="text">Download Brochure</Button>
+                {/* <Button variant="text">Download Brochure</Button> */}
             </article>)
             }
             <motion.div
@@ -43,7 +43,7 @@ function ScooterCard({side, pic, title, des, link}:{side: number, pic: string, t
                 <article className={styles.odd}>
                 <h2>{title}</h2>
                 <p>{des}</p>
-                <Button variant="text">Download Brochure</Button>
+                {/* <Button variant="text">Download Brochure</Button> */}
             </article>
             )
             }
@@ -55,6 +55,7 @@ export default function Scooter() {
     const [km, setKm] = useState(10);
   return (
     <main className={styles.scooter}>
+
       <section className={styles.ranges}>
       <h1>SCOOTER</h1>
       <h4>TAGGY  line</h4>

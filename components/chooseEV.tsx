@@ -31,7 +31,6 @@ function ChooseEvCard({ pic, title }: { pic: string; title: string }) {
 export default function ChooseEV() {
   return (
     <motion.main
-    
     className={styles.chooseEv}>
       <h2>Choose Your EV</h2>
       <section className={styles.bikeOrScooty}>

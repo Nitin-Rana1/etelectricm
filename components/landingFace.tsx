@@ -4,8 +4,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 //caro
 
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 // Throttled values
 import {
   useWindowSize,
@@ -40,25 +46,29 @@ function LandingFaceSell() {
             fill
           />
         ))}
-            <motion.h1
-  initial = {{ y: "-25vh", opacity: 0 }}
-  animate = {{ y: 0, opacity: 1, transition: { delay: 1, duration: 0.5 } }}
-
->
-              Powering your journey with sustainable energy
-            </motion.h1>
+      <motion.h1
+        initial={{ y: "-25vh", opacity: 0 }}
+        animate={{ y: 0, opacity: 1, transition: { delay: 1, duration: 0.5 } }}
+      >
+        Powering your journey with sustainable energy
+      </motion.h1>
       {/* <h1>Powering your journey with sustainable energy</h1> */}
-      <motion.span 
-      
-  initial = {{ x: "-55vh", opacity: 0 }}
-  animate = {{ y: 0, opacity: 1, transition: { delay: 1, duration: 1 } }}
-      >Sell</motion.span>
+      {/* <motion.span
+        initial={{ x: "-55vh", opacity: 0 }}
+        animate={{ y: 0, opacity: 1, transition: { delay: 1, duration: 1 } }}
+      >
+        Sell
+      </motion.span> */}
       <motion.h2
-      
-  initial = {{ y: "25vh", opacity: 0 }}
-  animate = {{ y: 0, opacity: 1, transition: { delay: 1, duration: 1.5 } }}>
-        Experience the future of transportation with our electric vehicle rentals and sales</motion.h2>
-      {go == 1 && <Button variant="contained">View More</Button>}
+        initial={{ y: "25vh", opacity: 0 }}
+        animate={{ y: 0, opacity: 1, transition: { delay: 1, duration: 1.5 } }}
+      >
+        Experience the future of transportation with our electric vehicle
+        rentals and sales
+      </motion.h2>
+      {go == 1 && <button> View More
+       </button>}
+       
     </main>
   );
 }
@@ -72,7 +82,8 @@ export default function LandingFace() {
   //   setGo(true);
   // }, []);
   const taglineS1 = "Powering your journey with sustainable energy";
-  const taglineS3 = "Experience the future of transportation with our electric vehicle rentals and sales";
+  const taglineS3 =
+    "Experience the future of transportation with our electric vehicle rentals and sales";
   return (
     <main className={styles.landingFace}>
       <CarouselProvider
@@ -85,8 +96,12 @@ export default function LandingFace() {
         // infinite
       >
         <Slider className={styles.cP}>
-        <Slide index={0}><LandingFaceSell/></Slide>
-          <Slide index={1}><LandingFaceSell/></Slide>
+          <Slide index={0}>
+            <LandingFaceSell />
+          </Slide>
+          <Slide index={1}>
+            <LandingFaceSell />
+          </Slide>
         </Slider>
         {/* <ButtonBack>Back</ButtonBack>
         <ButtonNext>Next</ButtonNext> */}

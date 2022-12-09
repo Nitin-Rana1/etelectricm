@@ -13,7 +13,7 @@ export default function Home() {
   const [showPopUp, setShowPopUp] = useState(false);
 
   useEffect(() => {
-    setTimeout(()=> setShowPopUp(true), 5000);
+    setTimeout(()=> setShowPopUp(true), 8000);
   }, []);
   return (
     <div className={styles.container}>
@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {/* {showPopUp && <PopUp/>} */}
+        {showPopUp && <PopUp/>}
         <LandingFace />
         <ChooseEV />
         <div id="Scooter">

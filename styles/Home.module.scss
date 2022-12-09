@@ -10,6 +10,21 @@
   .rent, .sell{
     height: 100vh;
     position: relative;
+    button {
+        position: absolute;
+        bottom: 8vh;
+        right: 7vw;
+        
+        
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+          background-image: linear-gradient(to right, #1d8a33 0%, rgb(10, 106, 32) 100%);
+        font-size: 0.9em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+border: none;
+padding: 0.5em 1em;
+color: white;
+border-radius: 20px;
+      }
   }
   .pic{
     object-fit: cover;
@@ -30,22 +45,16 @@
     font-size: 1em;
     margin-top: 13vh;
   }
-  Button {
-    position: absolute;
-    bottom: 8vh;
-    right: 7vw;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-      background-image: linear-gradient(to right, #1d8a33 0%, rgb(10, 106, 32) 100%);
-    font-size: 0.65em;
-
-  }
 }
 .chooseEv {
   h2{
     margin-top: 5vh;
   }
   text-align: center;
-
+  .bikeOrScooty{
+    display: flex;
+    justify-content: space-evenly;
+  }
   .chooseEvCard {
     padding-bottom: 5vh;
     display: grid;
@@ -53,8 +62,8 @@
     align-items: center;
     .imgHolder {
       position: relative;
-      width: 70vw;
-      height: 70vw;
+      width: 44vw;
+      height: 44vw;
       margin: 1.2vh 0;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 10px 16px 0px;
       border-radius: 15px;
@@ -62,8 +71,9 @@
     }
     .titleButton{
       Button{
+        font-size: 0.8em;
         padding: 0.5em 2em;
-        min-width:15vw;
+        min-width:25vw;
         // font-size: 1em;
         background-image: linear-gradient(to right, #525252 0%, rgb(19, 19, 19) 100%);
       }
@@ -149,6 +159,9 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .landingFace {
+    h1, span, h2{
+      padding: 0 8em;
+    }
   }
   .chooseEv{
     .bikeOrScooty{
@@ -182,6 +195,11 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .landingFace {
+    h1, span, h2{
+      padding: 0 10em;
+    }
+  }
   .scooter, .bike{
     .imgHolder{
       min-height: 25vw !important;
@@ -192,5 +210,10 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .landingFace {
+    h1, span, h2{
+      padding: 0 13em;
+    }
+  }
 
 }
