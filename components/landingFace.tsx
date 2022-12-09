@@ -48,7 +48,7 @@ function LandingFaceSell() {
         ))}
       <motion.h1
         initial={{ y: "-25vh", opacity: 0 }}
-        animate={{ y: 0, opacity: 1, transition: { delay: 1, duration: 0.5 } }}
+        animate={{ y: 0, opacity: 1, transition: { delay: 0, duration: 0.5 } }}
       >
         Powering your journey with sustainable energy
       </motion.h1>
@@ -61,29 +61,21 @@ function LandingFaceSell() {
       </motion.span> */}
       <motion.h2
         initial={{ y: "25vh", opacity: 0 }}
-        animate={{ y: 0, opacity: 1, transition: { delay: 1, duration: 1.5 } }}
+        animate={{ y: 0, opacity: 1, transition: { delay: 0, duration: 1.5 } }}
       >
         Experience the future of transportation with our electric vehicle
         rentals and sales
       </motion.h2>
-      {go == 1 && <button> View More
-       </button>}
+      {go == 1 && <motion.button initial={{x: "20vw", scale: 0, opacity: 0}}
+      animate={{x:0, opacity: 1, scale: 1, transition: {delay: 0, duration: 1.5}}}
+      > View More
+       </motion.button>}
        
     </main>
   );
 }
 
 export default function LandingFace() {
-  // const [showArrows, setShowArrows] = useState(false);
-  // const [go, setGo] = useState(false);
-  // const onlyWidth = useWindowWidth();
-  // useEffect(() => {
-  //   if (onlyWidth > 768) setShowArrows(true);
-  //   setGo(true);
-  // }, []);
-  const taglineS1 = "Powering your journey with sustainable energy";
-  const taglineS3 =
-    "Experience the future of transportation with our electric vehicle rentals and sales";
   return (
     <main className={styles.landingFace}>
       <CarouselProvider
@@ -91,9 +83,9 @@ export default function LandingFace() {
         naturalSlideHeight={125}
         totalSlides={2}
         className={styles.cP}
-        // isPlaying
-        // interval={5000}
-        // infinite
+        isPlaying
+        interval={4000}
+        infinite
       >
         <Slider className={styles.cP}>
           <Slide index={0}>
