@@ -13,8 +13,11 @@ function BikeCard({side, pic, title, des, link}:{side: number, pic: string, titl
             </article>)
             }
             
+            <div className={styles.imgContainer}>
+
             <div className={styles.imgHolder}>
-                <Image src={pic} alt="ev pic" fill objectFit='contain'/>
+                <Image src={pic} alt="ev pic" fill/>
+            </div>
             </div>
             {side == 1 && 
             (

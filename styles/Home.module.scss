@@ -1,11 +1,13 @@
 .landingFace {
   color: white;
-  // overflow: hidden;
   height: 100vh;
   text-align: center;
   position: relative;
-  .carousel{
-    background-color: red;
+  text-align: center;
+  .cP{
+    height: 100vh;
+  }
+  .rent, .sell{
     height: 100vh;
     position: relative;
   }
@@ -14,9 +16,10 @@
   }
   h1, span, h2{
     position: relative;
+    padding: 0 2em;
   }
   h1 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin-top: 28vh;
     margin-bottom: 3vh;
   }
@@ -24,6 +27,7 @@
     font-size: 0.8em;
   }
   h2 {
+    font-size: 1em;
     margin-top: 13vh;
   }
   Button {
@@ -32,6 +36,7 @@
     right: 7vw;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
       background-image: linear-gradient(to right, #1d8a33 0%, rgb(10, 106, 32) 100%);
+    font-size: 0.65em;
 
   }
 }
@@ -51,7 +56,9 @@
       width: 70vw;
       height: 70vw;
       margin: 1.2vh 0;
-      // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 10px 16px 0px;
+      border-radius: 15px;
+      overflow: hidden;
     }
     .titleButton{
       Button{
@@ -77,10 +84,13 @@
 }
 .scooter, .bike{
   .ranges{
+    .slider{
+    }
     padding: 0 8vw;
   }
   .scooterCard,.bikeCard{
     display: flex;
+    padding: 3em 1em;
     .even,.odd{
       // background-color: coral;
       display: flex;
@@ -103,11 +113,18 @@
         font-weight: bold;
       }
     }
+    .imgContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .imgHolder{
       position: relative;
-      min-height: min(35vw, 90vh);
-      min-width: min(35vw, 90vh);
+      min-height: min(45vw, 90vh);
+      min-width: min(45vw, 90vh);
       overflow: hidden;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 10px 16px 0px;
+      border-radius: 15px;
     }
   }
 }
@@ -146,13 +163,31 @@
     }
   }
   .scooter, .bike{
-
+    .ranges{
+      .slider{
+        width: 40vw;
+      }
+      padding: 0 8vw;
+    }
+    .imgContainer{
+    }
+    .imgHolder{
+      // min-height: min(25vw, 90vh);
+      min-height: 35vw !important;
+      min-width: 35vw !important;
+      // min-width: min(25vw, 90vh);
+    }
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+  .scooter, .bike{
+    .imgHolder{
+      min-height: 25vw !important;
+      min-width: 25vw !important;
+    }
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

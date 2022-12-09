@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
+import { motion } from "framer-motion";
 function ChooseEvCard({ pic, title }: { pic: string; title: string }) {
   return (
     <main className={styles.chooseEvCard}>
@@ -17,7 +18,7 @@ function ChooseEvCard({ pic, title }: { pic: string; title: string }) {
           )}
         </div>
         <div className={styles.imgHolder}>
-          <Image src={pic} alt="ev pic" fill objectFit="contain" />
+          <Image src={pic} alt="ev pic" fill/>
         </div>
         <div className={styles.viewMore}>
           <Button variant="contained">View More</Button>
@@ -29,12 +30,14 @@ function ChooseEvCard({ pic, title }: { pic: string; title: string }) {
 
 export default function ChooseEV() {
   return (
-    <main className={styles.chooseEv}>
+    <motion.main
+    
+    className={styles.chooseEv}>
       <h2>Choose Your EV</h2>
       <section className={styles.bikeOrScooty}>
       <ChooseEvCard pic="/scooty/s1.png" title="Scooter" />
       <ChooseEvCard pic="/bike/b1.png" title="Bike" />
       </section>
-    </main>
+    </motion.main>
   );
 }
