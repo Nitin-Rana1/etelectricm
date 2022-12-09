@@ -93,6 +93,9 @@ border-radius: 20px;
   }
 }
 .scooter, .bike{
+  h2{
+    font-size: 1.2em;
+  }
   .ranges{
     .slider{
     }
@@ -124,9 +127,7 @@ border-radius: 20px;
       }
     }
     .imgContainer{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
     }
     .imgHolder{
       position: relative;
@@ -138,7 +139,14 @@ border-radius: 20px;
     }
   }
 }
-
+.popUp{
+  background-color: green;
+  .inputs{
+    background-color: red;
+    width: 90vw;
+    padding: 2em 2em;
+  }
+}
 // height: 60vw;
 // p{
   // display: -webkit-box;
@@ -190,6 +198,13 @@ border-radius: 20px;
       min-width: 35vw !important;
       // min-width: min(25vw, 90vh);
     }
+  }
+}
+.popUp{
+  // background-color: pink;
+  h1{
+    font-size: 1.2em;
+    color: #525252;
   }
 }
 

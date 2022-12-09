@@ -32,7 +32,7 @@ function BikeCard({side, pic, title, des, link}:{side: number, pic: string, titl
           <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: false, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.8 }}
           className={styles.imgContainer}>
 
           <motion.div className={styles.imgHolder}  variants={cardVariants}>

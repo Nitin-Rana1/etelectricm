@@ -34,7 +34,7 @@ function LandingFaceSell() {
         (onlyWidth < 768 ? (
           <Image
             className={styles.pic}
-            src="/landing/l1.jpg"
+            src="/landing/l1.png"
             alt="ev scooty pic"
             fill
           />
