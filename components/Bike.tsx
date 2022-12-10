@@ -19,7 +19,7 @@ const cardVariants: Variants = {
     },
   },
 };
-function BikeCard({
+function ScooterCard({
   side,
   pic,
   title,
@@ -35,7 +35,7 @@ function BikeCard({
   brand: string,
 }) {
   return (
-    <main className={styles.bikeCard}>
+    <main className={styles.scooterCard}>
       {side == 0 && (
         <article className={styles.even}>
           <h2>{title}</h2>
@@ -57,6 +57,7 @@ function BikeCard({
       {side == 1 && (
         <article className={styles.odd}>
           <h2>{title}</h2>
+          <h3>{brand}</h3>
           <p>{des}</p>
           {/* <Button variant="text">Download Brochure</Button> */}
         </article>
@@ -72,13 +73,13 @@ function gimmeRange(n: number) {
 export default function Bike() {
   const [km, setKm] = useState(75);
   const data = useMemo(() => {
-    return evsData.filter((ev) => ev.range == gimmeRange(km) && ev.type == "Scooter");
+    return evsData.filter((ev) => ev.range == gimmeRange(km) && ev.type == "Bike");
   }, [km]);
 
   return (
-    <main className={styles.bike}>
+    <main className={styles.scooter}>
       <section className={styles.ranges}>
-        <h1>BIKE  </h1>
+        <h1>BIKE</h1>
         {/* <h4>TAGGY line</h4> */}
         <h2>Choose Your Requirement</h2>
         <div>Daily Use Km: {km}</div>
@@ -101,7 +102,7 @@ export default function Bike() {
       <section className={styles.allCards}>
         {data.map((ev, index)=>{
           return(
-            <BikeCard
+            <ScooterCard
             key={index}
           side={index%2}
           pic={ev.imageUrl}

@@ -57,6 +57,7 @@ function ScooterCard({
       {side == 1 && (
         <article className={styles.odd}>
           <h2>{title}</h2>
+          <h3>{brand}</h3>
           <p>{des}</p>
           {/* <Button variant="text">Download Brochure</Button> */}
         </article>

@@ -50,7 +50,7 @@ function LandingFaceSell() {
         initial={{ y: "-25vh", opacity: 0 }}
         animate={{ y: 0, opacity: 1, transition: { delay: 0, duration: 0.5 } }}
       >
-        Powering your journey with sustainable energy
+        Electrify your move
       </motion.h1>
       {/* <h1>Powering your journey with sustainable energy</h1> */}
       {/* <motion.span
@@ -63,8 +63,7 @@ function LandingFaceSell() {
         initial={{ y: "25vh", opacity: 0 }}
         animate={{ y: 0, opacity: 1, transition: { delay: 0, duration: 1.5 } }}
       >
-        Experience the future of transportation with our electric vehicle
-        rentals and sales
+        First Step to Future
       </motion.h2>
       {go == 1 && <motion.button initial={{x: "20vw", opacity: 0}}
       animate={{x:0, opacity: 1, transition: {delay: 0, duration: 1}}}
