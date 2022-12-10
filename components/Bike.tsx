@@ -101,7 +101,7 @@ export default function Bike() {
       <section className={styles.allCards}>
         {data.map((ev, index)=>{
           return(
-            <ScooterCard
+            <BikeCard
             key={index}
           side={index%2}
           pic={ev.imageUrl}
