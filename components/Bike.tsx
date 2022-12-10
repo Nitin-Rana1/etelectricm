@@ -25,18 +25,21 @@ function BikeCard({
   title,
   des,
   link,
+  brand
 }: {
-  side: number;
-  pic: string;
-  title: string;
-  des: string;
-  link: string;
+  side: number,
+  pic: string,
+  title: string,
+  des: string,
+  link: string,
+  brand: string,
 }) {
   return (
-    <main className={styles.scooterCard}>
+    <main className={styles.bikeCard}>
       {side == 0 && (
         <article className={styles.even}>
           <h2>{title}</h2>
+          <h3>{brand}</h3>
           <p>{des}</p>
           {/* <Button variant="text">Download Brochure</Button> */}
         </article>
@@ -69,13 +72,13 @@ function gimmeRange(n: number) {
 export default function Bike() {
   const [km, setKm] = useState(75);
   const data = useMemo(() => {
-    return evsData.filter((ev) => ev.range == gimmeRange(km) && ev.type == "Bike");
+    return evsData.filter((ev) => ev.range == gimmeRange(km) && ev.type == "Scooter");
   }, [km]);
 
   return (
-    <main className={styles.scooter}>
+    <main className={styles.bike}>
       <section className={styles.ranges}>
-        <h1>BIKE</h1>
+        <h1>BIKE  </h1>
         {/* <h4>TAGGY line</h4> */}
         <h2>Choose Your Requirement</h2>
         <div>Daily Use Km: {km}</div>
@@ -98,19 +101,20 @@ export default function Bike() {
       <section className={styles.allCards}>
         {data.map((ev, index)=>{
           return(
-            <BikeCard
+            <ScooterCard
+            key={index}
           side={index%2}
           pic={ev.imageUrl}
           link="none"
           title={ev.name}
+          brand={ev.brand}
           des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"
         />    
           )
         })}
         {data.length == 0 && (
-                    <div className={styles.outOfStocks}>
-
-          <h2>Stocks are running fast, doesn't it?</h2>
+          <div className={styles.outOfStocks}>
+          <h2>{"Stocks are running fast, doesn't it?"}</h2>
           <h2>Catch one while you can</h2>
           </div>
         )}

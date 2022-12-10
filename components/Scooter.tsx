@@ -39,6 +39,7 @@ function ScooterCard({
       {side == 0 && (
         <article className={styles.even}>
           <h2>{title}</h2>
+          <h3>{brand}</h3>
           <p>{des}</p>
           {/* <Button variant="text">Download Brochure</Button> */}
         </article>
