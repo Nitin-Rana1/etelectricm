@@ -25,12 +25,14 @@ function ScooterCard({
   title,
   des,
   link,
+  brand
 }: {
-  side: number;
-  pic: string;
-  title: string;
-  des: string;
-  link: string;
+  side: number,
+  pic: string,
+  title: string,
+  des: string,
+  link: string,
+  brand: string,
 }) {
   return (
     <main className={styles.scooterCard}>
@@ -99,17 +101,19 @@ export default function Scooter() {
         {data.map((ev, index)=>{
           return(
             <ScooterCard
+            key={index}
           side={index%2}
           pic={ev.imageUrl}
           link="none"
           title={ev.name}
+          brand={ev.brand}
           des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"
         />    
           )
         })}
         {data.length == 0 && (
           <div className={styles.outOfStocks}>
-          <h2>Stocks are running fast, doesn't it?</h2>
+          <h2>{"Stocks are running fast, doesn't it?"}</h2>
           <h2>Catch one while you can</h2>
           </div>
         )}
