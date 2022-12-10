@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@mui/material";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
@@ -76,6 +77,9 @@ function ChooseEvCard({
             </motion.div>
           )}
         </motion.div>
+
+
+
         <div className={styles.viewMore}>
           <Button variant="contained">View More</Button>
         </div>
@@ -89,7 +93,7 @@ export default function ChooseEV() {
     <motion.main className={styles.chooseEv}>
       <h2>Choose Your EV</h2>
       <section className={styles.bikeOrScooty}>
-        <ChooseEvCard pic="/scooty/s1.png" side="left" title="Scooter" />
+        <ChooseEvCard pic="/ev/kinetic-green/s/zing.png" side="left" title="Scooter" />
         <ChooseEvCard pic="/bike/b1.png" side="right" title="Bike" />
       </section>
     </motion.main>

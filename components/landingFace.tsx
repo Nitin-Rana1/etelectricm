@@ -66,8 +66,8 @@ function LandingFaceSell() {
         Experience the future of transportation with our electric vehicle
         rentals and sales
       </motion.h2>
-      {go == 1 && <motion.button initial={{x: "20vw", scale: 0, opacity: 0}}
-      animate={{x:0, opacity: 1, scale: 1, transition: {delay: 0, duration: 1.5}}}
+      {go == 1 && <motion.button initial={{x: "20vw", opacity: 0}}
+      animate={{x:0, opacity: 1, transition: {delay: 0, duration: 1}}}
       > View More
        </motion.button>}
        
@@ -95,8 +95,6 @@ export default function LandingFace() {
             <LandingFaceSell />
           </Slide>
         </Slider>
-        {/* <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext> */}
       </CarouselProvider>
     </main>
   );

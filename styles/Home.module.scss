@@ -4,32 +4,39 @@
   text-align: center;
   position: relative;
   text-align: center;
-  .cP{
+  .cP {
     height: 100vh;
   }
-  .rent, .sell{
+  .rent,
+  .sell {
     height: 100vh;
     position: relative;
     button {
-        position: absolute;
-        bottom: 8vh;
-        right: 7vw;
-        
-        
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-          background-image: linear-gradient(to right, #1d8a33 0%, rgb(10, 106, 32) 100%);
-        font-size: 0.9em;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-border: none;
-padding: 0.5em 1em;
-color: white;
-border-radius: 20px;
-      }
+      position: absolute;
+      bottom: 8vh;
+      right: 7vw;
+
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      background-image: linear-gradient(
+        to right,
+        #1d8a33 0%,
+        rgb(10, 106, 32) 100%
+      );
+      font-size: 0.9em;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border: none;
+      padding: 0.5em 1em;
+      color: white;
+      border-radius: 20px;
+    }
   }
-  .pic{
+  .pic {
     object-fit: cover;
   }
-  h1, span, h2{
+  h1,
+  span,
+  h2 {
     position: relative;
     padding: 0 2em;
   }
@@ -47,11 +54,11 @@ border-radius: 20px;
   }
 }
 .chooseEv {
-  h2{
+  h2 {
     margin-top: 5vh;
   }
   text-align: center;
-  .bikeOrScooty{
+  .bikeOrScooty {
     display: flex;
     justify-content: space-evenly;
   }
@@ -69,67 +76,91 @@ border-radius: 20px;
       border-radius: 15px;
       overflow: hidden;
     }
-    .titleButton{
-      Button{
+    .titleButton {
+      Button {
         font-size: 0.8em;
         padding: 0.5em 2em;
-        min-width:25vw;
+        min-width: 25vw;
         // font-size: 1em;
-        background-image: linear-gradient(to right, #525252 0%, rgb(19, 19, 19) 100%);
+        background-image: linear-gradient(
+          to right,
+          #525252 0%,
+          rgb(19, 19, 19) 100%
+        );
       }
-      .bike{
-        background-image: linear-gradient(to left, #525252 0%, rgb(19, 19, 19) 100%);
+      .bike {
+        background-image: linear-gradient(
+          to left,
+          #525252 0%,
+          rgb(19, 19, 19) 100%
+        );
       }
     }
-    .viewMore{
+    .viewMore {
       display: flex;
       justify-content: flex-end;
-      Button{
+      Button {
         font-size: 0.55em;
         background-color: #36be47;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
       }
     }
   }
 }
-.scooter, .bike{
-  h2{
+.scooter,
+.bike {
+  .allCards{
+    .outOfStocks{
+      h2{
+        
+        text-align: center;
+        padding: 0 5vw;
+        color: rgb(230, 106, 61);
+      }
+    }
+  }
+  h2 {
     font-size: 1.2em;
   }
-  .ranges{
-    .slider{
+  .ranges {
+    .slider {
     }
     padding: 0 8vw;
   }
-  .scooterCard,.bikeCard{
+  .scooterCard,
+  .bikeCard {
     display: flex;
-    padding: 3em 1em;
-    .even,.odd{
+    padding: 1.5em 1em;
+    .even,
+    .odd {
       // background-color: coral;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    .even{
+    .even {
       text-align: start;
     }
-    .odd{
+    .odd {
       // p{
-        text-align: end;
+      text-align: end;
       // }
     }
-    article{
+    article {
       padding: 0 4vw;
-      Button{
+      Button {
         font-size: 0.7em;
         font-weight: bold;
       }
     }
-    .imgContainer{
-
+    .imgContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .imgHolder{
+    .imgHolder {
       position: relative;
       min-height: min(45vw, 90vh);
       min-width: min(45vw, 90vh);
@@ -139,9 +170,9 @@ border-radius: 20px;
     }
   }
 }
-.popUp{
+.popUp {
   background-color: green;
-  .inputs{
+  .inputs {
     background-color: red;
     width: 90vw;
     padding: 2em 2em;
@@ -149,50 +180,55 @@ border-radius: 20px;
 }
 // height: 60vw;
 // p{
-  // display: -webkit-box;
-  // overflow: hidden;
-  // -webkit-box-orient: vertical;
-  // -webkit-line-clamp: 15;
+// display: -webkit-box;
+// overflow: hidden;
+// -webkit-box-orient: vertical;
+// -webkit-line-clamp: 15;
 // }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .landingFace {
-    h1, span, h2{
+    h1,
+    span,
+    h2 {
       padding: 0 8em;
     }
   }
-  .chooseEv{
-    .bikeOrScooty{
+  .chooseEv {
+    .bikeOrScooty {
       display: flex;
       justify-content: space-evenly;
     }
-    .chooseEvCard{
-      .imgHolder{
-      width: 35vw;
-      height: 35vw;
+    .chooseEvCard {
+      .imgHolder {
+        width: 35vw;
+        height: 35vw;
       }
     }
   }
-  .scooter, .bike{
-    .ranges{
-      .slider{
+  .scooter,
+  .bike {
+    padding-right: 5vw;
+    padding-left: 5vw;
+
+    .ranges {
+      .slider {
         width: 40vw;
       }
       padding: 0 8vw;
     }
-    .imgContainer{
+    .imgContainer {
+      margin: 0 2vw;
     }
-    .imgHolder{
+    .imgHolder {
       // min-height: min(25vw, 90vh);
       min-height: 35vw !important;
       min-width: 35vw !important;
@@ -200,9 +236,8 @@ border-radius: 20px;
     }
   }
 }
-.popUp{
-  // background-color: pink;
-  h1{
+.popUp {
+  h1 {
     font-size: 1.2em;
     color: #525252;
   }
@@ -211,12 +246,15 @@ border-radius: 20px;
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .landingFace {
-    h1, span, h2{
+    h1,
+    span,
+    h2 {
       padding: 0 10em;
     }
   }
-  .scooter, .bike{
-    .imgHolder{
+  .scooter,
+  .bike {
+    .imgHolder {
       min-height: 25vw !important;
       min-width: 25vw !important;
     }
@@ -226,9 +264,10 @@ border-radius: 20px;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .landingFace {
-    h1, span, h2{
+    h1,
+    span,
+    h2 {
       padding: 0 13em;
     }
   }
-
 }

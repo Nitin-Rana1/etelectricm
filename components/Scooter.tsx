@@ -1,15 +1,16 @@
 import { Button, Slider } from "@mui/material";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useMemo, useState } from "react";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import evsData from "../data/evs";
 const cardVariants: Variants = {
   offscreen: {
     y: 300,
     rotate: -30,
   },
   onscreen: {
-    y: 50,
+    y: 0,
     rotate: 0,
     transition: {
       type: "spring",
@@ -60,14 +61,22 @@ function ScooterCard({
     </main>
   );
 }
-
+function gimmeRange(n: number) {
+  if (n <= 75) return "short";
+  if (n <= 100) return "medium";
+  return "long";
+}
 export default function Scooter() {
-  const [km, setKm] = useState(10);
+  const [km, setKm] = useState(75);
+  const data = useMemo(() => {
+    return evsData.filter((ev) => ev.range == gimmeRange(km) && ev.type == "Scooter");
+  }, [km]);
+
   return (
     <main className={styles.scooter}>
       <section className={styles.ranges}>
         <h1>SCOOTER</h1>
-        <h4>TAGGY line</h4>
+        {/* <h4>TAGGY line</h4> */}
         <h2>Choose Your Requirement</h2>
         <div>Daily Use Km: {km}</div>
         <div className={styles.slider}>
@@ -80,41 +89,30 @@ export default function Scooter() {
             }}
             step={10}
             marks
-            min={0}
+            min={50}
             max={150}
             valueLabelDisplay="auto"
           />
         </div>
       </section>
-      <section>
-        <ScooterCard
-          side={0}
-          pic="/scooty/s1.png"
+      <section className={styles.allCards}>
+        {data.map((ev, index)=>{
+          return(
+            <ScooterCard
+          side={index%2}
+          pic={ev.imageUrl}
           link="none"
-          title="Scooty Name"
+          title={ev.name}
           des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"
-        />
-        <ScooterCard
-          side={1}
-          pic="/scooty/s1.png"
-          link="none"
-          title="Scooty Name"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"
-        />
-        <ScooterCard
-          side={0}
-          pic="/scooty/s1.png"
-          link="none"
-          title="Scooty Name"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"
-        />
-        <ScooterCard
-          side={1}
-          pic="/scooty/s1.png"
-          link="none"
-          title="Scooty Name"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"
-        />
+        />    
+          )
+        })}
+        {data.length == 0 && (
+          <div className={styles.outOfStocks}>
+          <h2>Stocks are running fast, doesn't it?</h2>
+          <h2>Catch one while you can</h2>
+          </div>
+        )}
       </section>
     </main>
   );

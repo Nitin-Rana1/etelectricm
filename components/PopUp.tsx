@@ -86,7 +86,7 @@ export default function PopUp() {
         </DialogContentText>
       </DialogContent>
         : 
-        <div>
+        <>
         <DialogTitle sx={{fontSize: "1.2em"}}>Your First step to Go Green</DialogTitle>
 
         <DialogContent>
@@ -120,7 +120,7 @@ export default function PopUp() {
             Submit
           </Button>
         </DialogActions>
-        </div>
+        </>
 }
       </Dialog>
     </main>

@@ -24,7 +24,6 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         {showPopUp && <PopUp/>}
-        {/* <PopUp/> */}
         <LandingFace />
         <ChooseEV />
         <div id="Scooter">
