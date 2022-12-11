@@ -93,8 +93,8 @@ export default function Scooter() {
             }}
             step={10}
             marks
-            min={50}
-            max={150}
+            min={65}
+            max={120}
             valueLabelDisplay="auto"
           />
         </div>

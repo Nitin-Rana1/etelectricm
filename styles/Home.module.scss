@@ -13,7 +13,7 @@
     position: relative;
     button {
       position: absolute;
-      bottom: 8vh;
+      bottom: 15vh;
       right: 7vw;
 
       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
@@ -182,11 +182,38 @@
   }
 }
 .popUp {
-  background-color: green;
+  // color:#1d8a33;
   .inputs {
-    background-color: red;
     width: 90vw;
     padding: 2em 2em;
+  }
+}
+.footer{
+  background-color: #e3e4ee;
+  .promote{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1.1em;
+    font-size: 0.8em;
+    span{
+      padding-left: 2em;
+      padding-right: 0.5em;
+      font-style: italic;
+    }
+  }
+  article{
+
+    padding: 2em 0em 1.5em 0em;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    h1{
+      color: #404040;
+    }
+    section{
+      color: #1a1a1a;
+      display: grid;
+    }
   }
 }
 // height: 60vw;

@@ -21,7 +21,7 @@ import {
   arrayUnion,
   serverTimestamp,
 } from "firebase/firestore";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { minHeight } from "@mui/system";
 
 const Transition = React.forwardRef(function Transition(
@@ -33,17 +33,14 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function PopUp() {
-  const [open, setOpen] = useState(true);
+export default function PopUp({open, closing}:{open: boolean, closing: ()=> void}) {
+  // const [open, setOpen] = useState(state);
   const [name, setName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [city, setCity] = useState("");
   const [thankYou, setThankYou] = useState(false);
   const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
+    // setOpen(true);
   };
   async function handleSubmit() {
     let uid = nanoid();
@@ -56,8 +53,8 @@ export default function PopUp() {
     });
     setTimeout(()=>{
       setThankYou(false);
-      handleClose();
-    }, 1500);
+      closing();
+    }, 1200);
   }
 
   return (
@@ -66,20 +63,20 @@ export default function PopUp() {
         open={open}
         TransitionComponent={Transition}
         keepMounted
-        onClose={handleClose}
+        onClose={closing}
         aria-describedby="alert-dialog-slide-description"
       >
         {thankYou ? 
         <DialogContent sx={{ minHeight: "55vh", display: "grid", justifyContent: "center", textAlign: "center"}}>
           <DialogContentText
-          sx={{ marginBottom: "1.5em", marginTop: "1.2em",fontSize: "1.8em",}}
+          sx={{ marginBottom: "1.5em", marginTop: "1.2em",fontSize: "1.8em", color: "#1d8a33"}}
           id="alert-dialog-slide-description"
         >
          Thanks
         </DialogContentText>
 
         <DialogContentText
-          sx={{ marginBottom: "1.5em", marginTop: "1.2em", fontSize: "1.8em", }}
+          sx={{ marginBottom: "1.5em", marginTop: "1.2em", fontSize: "1.8em",  color: "#1d8a33" }}
           id="alert-dialog-slide-description"
         >
          Let&apos;s Go Green Together!!
@@ -87,9 +84,9 @@ export default function PopUp() {
       </DialogContent>
         : 
         <>
-        <DialogTitle sx={{fontSize: "1.2em"}}>Your First step to Go Green</DialogTitle>
+        <DialogTitle sx={{fontSize: "1.2em", color: "#1d8a33", fontWeight: "bold"}}>Your First step to Go Green</DialogTitle>
 
-        <DialogContent>
+        <DialogContent sx={{display: "grid", justifyContent: "center"}}>
           <DialogContentText
             sx={{ marginBottom: "1.5em", marginTop: "1.5em" }}
             id="alert-dialog-slide-description"
@@ -116,6 +113,9 @@ export default function PopUp() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
+        <Button variant="text" sx={{marginRight: "2em"}} onClick={handleSubmit}>
+            Cancel
+          </Button>
           <Button variant="contained" onClick={handleSubmit}>
             Submit
           </Button>
