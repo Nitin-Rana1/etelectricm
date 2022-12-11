@@ -263,6 +263,7 @@
       justify-content: space-evenly;
     }
     .chooseEvCard {
+      
       .imgHolder {
         width: 35vw;
         height: 35vw;
@@ -271,9 +272,13 @@
   }
   .scooter,
   .bike {
+
     padding-right: 5vw;
     padding-left: 5vw;
-
+    .scooterCard{
+      display: flex;
+      justify-content: space-evenly;
+    }
     .ranges {
       .slider {
         width: 40vw;
