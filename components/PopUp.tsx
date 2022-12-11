@@ -113,7 +113,7 @@ export default function PopUp({open, closing}:{open: boolean, closing: ()=> void
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-        <Button variant="text" sx={{marginRight: "2em"}} onClick={handleSubmit}>
+        <Button variant="text" sx={{marginRight: "2em"}} onClick={closing}>
             Cancel
           </Button>
           <Button variant="contained" onClick={handleSubmit}>
