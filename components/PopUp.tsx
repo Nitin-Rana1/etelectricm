@@ -54,7 +54,7 @@ export default function PopUp({open, closing}:{open: boolean, closing: ()=> void
     setTimeout(()=>{
       setThankYou(false);
       closing();
-    }, 1200);
+    }, 900);
   }
 
   return (
