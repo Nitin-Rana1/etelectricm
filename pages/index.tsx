@@ -14,7 +14,7 @@ export default function Home() {
   const [showPopUp, setShowPopUp] = useState(false);
 
   useEffect(() => {
-    setTimeout(()=> setShowPopUp(true), 3000);
+    setTimeout(()=> setShowPopUp(true), 8000);
   }, []);
   return (
     <div className={styles.container}>
