@@ -26,7 +26,7 @@ export default function Home() {
       <main className={styles.main} id="home">
         <PopUp open = {showPopUp} closing = {()=> setShowPopUp(false)}/>
         <LandingFace />
-        <ChooseEV />
+        <ChooseEV handleContactClick={()=> setShowPopUp(true)}/>
         <div id="Scooter">
           <Scooter />
         </div>

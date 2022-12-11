@@ -37,14 +37,16 @@ function ChooseEvCard({
   pic,
   title,
   side,
+  handleContactClick
 }: {
   pic: string;
   title: string;
   side: string;
+  handleContactClick: ()=> void;
 }) {
   return (
-    <main className={styles.chooseEvCard}>
-      <a href={"#" + title}>
+    <main className={styles.chooseEvCard}  onClick={handleContactClick}>
+      {/* <a href={"#" + title}> */}
         <div className={styles.titleButton}>
           {title == "Bike" ? (
             <Button variant="contained" className={styles.bike}>
@@ -83,18 +85,18 @@ function ChooseEvCard({
         <div className={styles.viewMore}>
           <Button variant="contained">View More</Button>
         </div>
-      </a>
+      {/* </a> */}
     </main>
   );
 }
 
-export default function ChooseEV() {
+export default function ChooseEV({handleContactClick}:{handleContactClick: ()=> void}) {
   return (
     <motion.main className={styles.chooseEv}>
       <h2>Choose Your EV</h2>
       <section className={styles.bikeOrScooty}>
-        <ChooseEvCard pic="/ev/kinetic-green/s/zing.png" side="left" title="Scooter" />
-        <ChooseEvCard pic="/bike/b1.png" side="right" title="Bike" />
+        <ChooseEvCard handleContactClick={handleContactClick} pic="/ev/kinetic-green/s/zing.png" side="left" title="Scooter" />
+        <ChooseEvCard handleContactClick={handleContactClick} pic="/bike/b1.png" side="right" title="Bike" />
       </section>
     </motion.main>
   );
