@@ -34,7 +34,7 @@ function LandingFaceSell() {
         (onlyWidth < 768 ? (
           <Image
             className={styles.pic}
-            src="/landing/l1.png"
+            src="/landing/l2.png"
             alt="ev scooty pic"
             fill
           />
@@ -69,7 +69,6 @@ function LandingFaceSell() {
       animate={{x:0, opacity: 1, transition: {delay: 0, duration: 1}}}
       > View More
        </motion.button>} */}
-       
     </main>
   );
 }
