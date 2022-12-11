@@ -153,11 +153,17 @@
     }
     .even {
       text-align: start;
+      .ul{
+        text-align: left;
+      }
     }
     .odd {
       // p{
       text-align: end;
       // }
+      .ul{
+        text-align: left;
+      }
     }
     article {
       padding: 0 4vw;
@@ -179,6 +185,17 @@
       box-shadow: rgba(99, 99, 99, 0.2) 0px 10px 16px 0px;
       border-radius: 15px;
     }
+  }
+  .ul{
+    h3{
+      padding-top: 1em;
+      font-size: 0.9em !important;
+      text-align: center;
+    }
+    li{
+      font-size: 0.85em !important;
+    }
+    text-align: center;
   }
 }
 .popUp {

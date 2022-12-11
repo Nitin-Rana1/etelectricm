@@ -23,16 +23,14 @@ function ScooterCard({
   side,
   pic,
   title,
-  des,
-  link,
-  brand
+  brand,
+  range,
 }: {
   side: number,
   pic: string,
   title: string,
-  des: string,
-  link: string,
   brand: string,
+  range: string,
 }) {
   return (
     <main className={styles.scooterCard}>
@@ -40,7 +38,7 @@ function ScooterCard({
         <article className={styles.even}>
           <h2>{title}</h2>
           <h3>{brand}</h3>
-          <p>{des}</p>
+          {listFromRange(range)}
           {/* <Button variant="text">Download Brochure</Button> */}
         </article>
       )}
@@ -58,12 +56,35 @@ function ScooterCard({
         <article className={styles.odd}>
           <h2>{title}</h2>
           <h3>{brand}</h3>
-          <p>{des}</p>
+          {listFromRange(range)}
           {/* <Button variant="text">Download Brochure</Button> */}
         </article>
       )}
     </main>
   );
+}
+function listFromRange(range: string){
+  let  shortArr = ["House Wife", "Students for tutor", "Business with local deliveries (grocery shop)", "Small Businesses"];
+  let mediumArr = ["Real Estate broker", "Salesman", "Delivery", "Ola / Uber / Rapido partner"];
+  let longArr = ["Sales", "Ola / Uber / Rapido partner", "Delivery Boy", "Office / Service worker"];
+  let dataArr = shortArr;
+  if (range == "medium") dataArr = mediumArr;
+  else if(range == "long") dataArr = longArr;
+  return(
+    <div  className={styles.ul}>
+      {range == "short" && <h3>Best for: Local Commuting</h3>}
+      {range == "medium" && <h3>Best for: Intra City Commuting</h3>}
+      {range == "long" && <h3>Best for: Inter City Commuting</h3>}
+
+    <ul>
+      {dataArr.map((value,index) =>{
+        return(
+          <li key={index}>{value}</li>
+          )
+        })}
+    </ul>
+        </div>
+  )
 }
 function gimmeRange(n: number) {
   if (n <= 75) return "short";
@@ -106,11 +127,10 @@ export default function Bike() {
             key={index}
           side={index%2}
           pic={ev.imageUrl}
-          link="none"
           title={ev.name}
           brand={ev.brand}
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eaque voluptatem minus sapiente facere vitae, doloremque voluptas ad"
-        />    
+          range= {ev.range}  
+          />    
           )
         })}
         {data.length == 0 && (
