@@ -65,10 +65,10 @@ function LandingFaceSell() {
       >
         First Step to Future
       </motion.h2>
-      {go == 1 && <motion.button initial={{x: "20vw", opacity: 0}}
+      {/* {go == 1 && <motion.button initial={{x: "20vw", opacity: 0}}
       animate={{x:0, opacity: 1, transition: {delay: 0, duration: 1}}}
       > View More
-       </motion.button>}
+       </motion.button>} */}
        
     </main>
   );
