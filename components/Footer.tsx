@@ -8,7 +8,7 @@ export default function Footer({
   return (
     <footer className={styles.footer}>
       <article>
-        <section>
+        <section className={styles.noUnderline}>
           <h1>Quick List</h1>
           <a href="#home">
             <span>Home</span>
@@ -49,7 +49,7 @@ export default function Footer({
             </a>
           </span>
           <span>
-            <a href="https://nitin-rana-portfolio.vercel.app/">Web Dev Nitin</a>
+            <a href="https://nitin-rana-portfolio.vercel.app/">Web Dev NR</a>
           </span>
         </div>
       </div>

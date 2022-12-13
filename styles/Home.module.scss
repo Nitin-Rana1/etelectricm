@@ -207,8 +207,15 @@
 }
 .footer{
   background-color: #e3e4ee;
+
   a{
     text-decoration: underline;
+  }
+  .noUnderline{
+    a{
+
+      text-decoration: none !important;
+    }
   }
   .callUs{
     padding-top: 0.5em;
