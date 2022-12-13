@@ -1,6 +1,10 @@
 import styles from "../styles/Home.module.scss";
 
-export default function Footer({handleContactClick}:{handleContactClick: ()=> void}) {
+export default function Footer({
+  handleContactClick,
+}: {
+  handleContactClick: () => void;
+}) {
   return (
     <footer className={styles.footer}>
       <article>
@@ -10,10 +14,10 @@ export default function Footer({handleContactClick}:{handleContactClick: ()=> vo
             <span>Home</span>
           </a>
           <a href="#Scooter">
-          <span>Scooter</span>
+            <span>Scooter</span>
           </a>
           <a href="#Bike">
-          <span>Bike</span>
+            <span>Bike</span>
           </a>
           <span onClick={handleContactClick}>Contact Us</span>
         </section>
@@ -22,8 +26,14 @@ export default function Footer({handleContactClick}:{handleContactClick: ()=> vo
           <span>Sahid Nagar | CRP</span>
           <span>Squarel</span>
           <span>Bhubaneswar</span>
-          <span>6742547339</span>
-          <span>9337903630</span>
+          <span className={styles.callUs}>Call Us:-</span>
+          <span>
+            <a href="tel:+916742547339">6742547339</a>
+          </span>
+          <span>
+            <a href="tel:+919337903630">9337903630</a>
+          </span>
+          <span className={styles.callUs}>Mail Us:-</span>
           <span>
             <a href="mailto:etelectricm@gmail.com">etelectricm@gmail.com</a>
           </span>
@@ -32,10 +42,16 @@ export default function Footer({handleContactClick}:{handleContactClick: ()=> vo
       {/* <div className={styles.icons}></div> */}
       <hr />
       <div className={styles.promote}>
-        <span>FeatureSM</span>
-        <span>
-          <a href="https://nitin-rana-portfolio.vercel.app/">Web Dev Nitin</a>
-        </span>
+        <div className={styles.vertical}>
+          <span>
+            <a href="https://www.instagram.com/featuresm.digitalserviceanswer/?hl=en">
+              FeatureSM
+            </a>
+          </span>
+          <span>
+            <a href="https://nitin-rana-portfolio.vercel.app/">Web Dev Nitin</a>
+          </span>
+        </div>
       </div>
     </footer>
   );

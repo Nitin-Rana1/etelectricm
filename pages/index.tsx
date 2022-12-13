@@ -28,10 +28,10 @@ export default function Home() {
         <LandingFace />
         <ChooseEV handleContactClick={()=> setShowPopUp(true)}/>
         <div id="Scooter">
-          <Scooter />
+          <Scooter handleContactClick={()=> setShowPopUp(true)}/>
         </div>
         <div id="Bike">
-        <Bike />
+        <Bike handleContactClick={()=> setShowPopUp(true)}/>
         </div>
         <Footer handleContactClick={()=> setShowPopUp(true)}/>
       </main>

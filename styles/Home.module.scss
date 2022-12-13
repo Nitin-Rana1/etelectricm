@@ -207,11 +207,25 @@
 }
 .footer{
   background-color: #e3e4ee;
+  a{
+    text-decoration: underline;
+  }
+  .callUs{
+    padding-top: 0.5em;
+  }
   .promote{
     display: flex;
     justify-content: flex-end;
     padding-bottom: 1.1em;
     font-size: 0.8em;
+    .vertical{
+      a{
+
+        text-decoration: none !important;
+      }
+
+      display: grid;
+    }
     span{
       padding-left: 2em;
       padding-right: 0.5em;

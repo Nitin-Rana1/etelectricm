@@ -25,12 +25,14 @@ function ScooterCard({
   title,
   brand,
   range,
+  handleContactClick
 }: {
-  side: number,
-  pic: string,
-  title: string,
-  brand: string,
-  range: string,
+  side: number;
+  pic: string;
+  title: string;
+  brand: string;
+  range: string;
+  handleContactClick: ()=> void;
 }) {
   return (
     <main className={styles.scooterCard}>
@@ -48,7 +50,7 @@ function ScooterCard({
         viewport={{ once: true, amount: 0.8 }}
         className={styles.imgContainer}
       >
-        <motion.div className={styles.imgHolder} variants={cardVariants}>
+        <motion.div onClick={handleContactClick} className={styles.imgHolder} variants={cardVariants}>
           <Image src={pic} alt="ev pic" fill />
         </motion.div>
       </motion.div>
@@ -63,38 +65,57 @@ function ScooterCard({
     </main>
   );
 }
-function listFromRange(range: string){
-  let  shortArr = ["House Wife", "Students for tutor", "Business with local deliveries (grocery shop)", "Small Businesses"];
-  let mediumArr = ["Real Estate broker", "Salesman", "Delivery", "Ola / Uber / Rapido partner"];
-  let longArr = ["Sales", "Ola / Uber / Rapido partner", "Delivery Boy", "Office / Service worker"];
+function listFromRange(range: string) {
+  let shortArr = [
+    "House Wife",
+    "Students for tutor",
+    "Business with local deliveries (grocery shop)",
+    "Small Businesses",
+  ];
+  let mediumArr = [
+    "Real Estate broker",
+    "Salesman",
+    "Delivery",
+    "Ola / Uber / Rapido partner",
+  ];
+  let longArr = [
+    "Sales",
+    "Ola / Uber / Rapido partner",
+    "Delivery Boy",
+    "Office / Service worker",
+  ];
   let dataArr = shortArr;
   if (range == "medium") dataArr = mediumArr;
-  else if(range == "long") dataArr = longArr;
-  return(
-    <div  className={styles.ul}>
+  else if (range == "long") dataArr = longArr;
+  return (
+    <div className={styles.ul}>
       {range == "short" && <h3>Best for: Local Commuting</h3>}
       {range == "medium" && <h3>Best for: Intra City Commuting</h3>}
       {range == "long" && <h3>Best for: Inter City Commuting</h3>}
 
-    <ul>
-      {dataArr.map((value,index) =>{
-        return(
-          <li key={index}>{value}</li>
-          )
+      <ul>
+        {dataArr.map((value, index) => {
+          return <li key={index}>{value}</li>;
         })}
-    </ul>
-        </div>
-  )
+      </ul>
+    </div>
+  );
 }
 function gimmeRange(n: number) {
   if (n <= 75) return "short";
   if (n <= 100) return "medium";
   return "long";
 }
-export default function Scooter() {
-  const [km, setKm] = useState(75);
+export default function Scooter({
+  handleContactClick,
+}: {
+  handleContactClick: () => void;
+}) {
+  const [km, setKm] = useState(85);
   const data = useMemo(() => {
-    return evsData.filter((ev) => ev.range == gimmeRange(km) && ev.type == "Scooter");
+    return evsData.filter(
+      (ev) => ev.range == gimmeRange(km) && ev.type == "Scooter"
+    );
   }, [km]);
 
   return (
@@ -121,22 +142,23 @@ export default function Scooter() {
         </div>
       </section>
       <section className={styles.allCards}>
-        {data.map((ev, index)=>{
-          return(
+        {data.map((ev, index) => {
+          return (
             <ScooterCard
-            key={index}
-          side={index%2}
-          pic={ev.imageUrl}
-          title={ev.name}
-          brand={ev.brand}
-          range= {ev.range}  
-          />    
-          )
+              key={index}
+              side={index % 2}
+              pic={ev.imageUrl}
+              title={ev.name}
+              brand={ev.brand}
+              range={ev.range}
+              handleContactClick={handleContactClick}
+            />
+          );
         })}
         {data.length == 0 && (
           <div className={styles.outOfStocks}>
-          <h2>{"Stocks are running fast, doesn't it?"}</h2>
-          <h2>Catch one while you can</h2>
+            <h2>{"Stocks are running fast, doesn't it?"}</h2>
+            <h2>Catch one while you can</h2>
           </div>
         )}
       </section>
