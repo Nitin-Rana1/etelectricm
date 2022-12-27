@@ -36,7 +36,7 @@ export default function Para() {
     <main className={styles.para}>
       <h1>WHY CHOOSE US?</h1>
       {dataArr.map((value, index) => {
-        return <Paragraph data={value} />;
+        return <Paragraph key={index} data={value} />;
       })}
     </main>
   );
