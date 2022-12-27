@@ -110,10 +110,9 @@
 }
 .scooter,
 .bike {
-  .allCards{
-    .outOfStocks{
-      h2{
-        
+  .allCards {
+    .outOfStocks {
+      h2 {
         text-align: center;
         padding: 0 5vw;
         color: rgb(230, 106, 61);
@@ -135,15 +134,15 @@
     .even,
     .odd {
       // background-color: coral;
-      h2{
+      h2 {
         color: coral;
         font-size: 1.2em;
       }
-      h3{
+      h3 {
         font-size: 1em;
         margin: 0 0;
       }
-      p{
+      p {
         font-size: 0.9em;
       }
       display: flex;
@@ -153,7 +152,7 @@
     }
     .even {
       text-align: start;
-      .ul{
+      .ul {
         text-align: left;
       }
     }
@@ -161,7 +160,7 @@
       // p{
       text-align: end;
       // }
-      .ul{
+      .ul {
         text-align: left;
       }
     }
@@ -186,13 +185,13 @@
       border-radius: 15px;
     }
   }
-  .ul{
-    h3{
+  .ul {
+    h3 {
       padding-top: 1em;
       font-size: 0.9em !important;
       text-align: center;
     }
-    li{
+    li {
       font-size: 0.85em !important;
     }
     text-align: center;
@@ -205,50 +204,49 @@
     padding: 2em 2em;
   }
 }
-.footer{
+.footer {
   background-color: #e3e4ee;
-
-  a{
+  .contact {
+    cursor: pointer;
+  }
+  a {
     text-decoration: underline;
   }
-  .noUnderline{
-    a{
-
+  .noUnderline {
+    a {
       text-decoration: none !important;
     }
   }
-  .callUs{
+  .callUs {
     padding-top: 0.5em;
   }
-  .promote{
+  .promote {
     display: flex;
     justify-content: flex-end;
     padding-bottom: 1.1em;
     font-size: 0.8em;
-    .vertical{
-      a{
-
+    .vertical {
+      a {
         text-decoration: none !important;
       }
 
       display: grid;
     }
-    span{
+    span {
       padding-left: 2em;
       padding-right: 0.5em;
       font-style: italic;
     }
   }
-  article{
-
+  article {
     padding: 2em 0em 1.5em 0em;
     margin-top: 20vh;
     display: flex;
     justify-content: space-evenly;
-    h1{
+    h1 {
       color: #404040;
     }
-    section{
+    section {
       color: #1a1a1a;
       display: grid;
     }
@@ -284,7 +282,6 @@
       justify-content: space-evenly;
     }
     .chooseEvCard {
-      
       .imgHolder {
         width: 35vw;
         height: 35vw;
@@ -293,10 +290,9 @@
   }
   .scooter,
   .bike {
-
     padding-right: 5vw;
     padding-left: 5vw;
-    .scooterCard{
+    .scooterCard {
       display: flex;
       justify-content: space-evenly;
     }

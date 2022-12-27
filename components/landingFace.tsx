@@ -22,7 +22,7 @@ import { motion } from "framer-motion";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import { Carousel } from "react-responsive-carousel";
 
-function LandingFaceSell() {
+function LandingFaceSell({ mSrc, dSrc }: { mSrc: string; dSrc: string }) {
   let onlyWidth = useWindowWidth();
   const [go, setGo] = useState(0);
   useEffect(() => {
@@ -32,19 +32,9 @@ function LandingFaceSell() {
     <main className={styles.rent}>
       {go == 1 &&
         (onlyWidth < 768 ? (
-          <Image
-            className={styles.pic}
-            src="/landing/l1.png"
-            alt="ev scooty pic"
-            fill
-          />
+          <Image className={styles.pic} src={mSrc} alt="ev scooty pic" fill />
         ) : (
-          <Image
-            className={styles.pic}
-            src="/landing/l2.png"
-            alt="ev scooty pic"
-            fill
-          />
+          <Image className={styles.pic} src={dSrc} alt="ev scooty pic" fill />
         ))}
       <motion.h1
         initial={{ y: "-25vh", opacity: 0 }}
@@ -69,7 +59,6 @@ function LandingFaceSell() {
       animate={{x:0, opacity: 1, transition: {delay: 0, duration: 1}}}
       > View More
        </motion.button>} */}
-       
     </main>
   );
 }
@@ -88,10 +77,10 @@ export default function LandingFace() {
       >
         <Slider className={styles.cP}>
           <Slide index={0}>
-            <LandingFaceSell />
+            <LandingFaceSell mSrc="/landing/m1.png" dSrc="/landing/d2.png" />
           </Slide>
           <Slide index={1}>
-            <LandingFaceSell />
+            <LandingFaceSell mSrc="/landing/m2.png" dSrc="/landing/d2.png" />
           </Slide>
         </Slider>
       </CarouselProvider>

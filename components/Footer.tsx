@@ -19,7 +19,10 @@ export default function Footer({
           <a href="#Bike">
             <span>Bike</span>
           </a>
-          <span onClick={handleContactClick}>Contact Us</span>
+          <span onClick={handleContactClick} className={styles.contact}>
+            {" "}
+            Contact Us
+          </span>
         </section>
         <section>
           <h1>Address</h1>
