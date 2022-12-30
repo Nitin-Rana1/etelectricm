@@ -303,6 +303,17 @@
       padding: 0 8em;
     }
   }
+  .menu {
+    top: 12vw !important;
+  }
+  .settingIcon {
+    max-width: 5vw;
+    max-height: 4vw;
+    position: absolute;
+    z-index: 10;
+    right: 3vw;
+    top: 5vw;
+  }
   .chooseEv {
     .bikeOrScooty {
       display: flex;
@@ -372,6 +383,32 @@
     span,
     h2 {
       padding: 0 13em;
+    }
+  }
+}
+.rent,
+.sell {
+  .menu {
+    right: 0;
+    top: 15vw;
+    z-index: 10;
+    padding: 1em 1em;
+    border-radius: 15px;
+    div {
+      margin-bottom: 1em;
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      background-color: #d6dfe9;
+    }
+  }
+  .settingIcon {
+    width: 10vw;
+    height: 8vw;
+    position: absolute;
+    z-index: 10;
+    right: 3vw;
+    top: 5vw;
+    .humburger {
     }
   }
 }
