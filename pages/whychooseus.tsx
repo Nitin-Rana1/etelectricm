@@ -15,9 +15,9 @@ import styles from "../styles/WhyChooseUs.module.scss";
 export default function WhyChooseUs() {
   const [showPopUp, setShowPopUp] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => setShowPopUp(true), 8000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => setShowPopUp(true), 8000);
+  // }, []);
   return (
     <div className={styles.container}>
       <Head>

@@ -1,5 +1,5 @@
 import styles from "../../styles/WhyChooseUs.module.scss";
-
+import Image from "next/image";
 // Easy To Drive Low Running Cost WHY CHOOSE US? ECOFRIENDLY  LOW MAINTAINANCE  EASY TO DRIVE    AVIR X Quick List Home Scooter Bike Contact Us Address Sahid Nagar I CRP Squarel Bhubaneswar 6742547339 9337903630 etelectricm@gmail.com inf FeatureSM
 interface Data {
   head: string;
@@ -35,9 +35,26 @@ export default function Para() {
   return (
     <main className={styles.para}>
       <h1>WHY CHOOSE US?</h1>
-      {dataArr.map((value, index) => {
-        return <Paragraph key={index} data={value} />;
-      })}
+      <Image
+        src="/whyChooseUs/back2.png"
+        height={300}
+        width={350}
+        alt="background Picture"
+        className={styles.pic1}
+      />
+      <Image
+        src="/whyChooseUs/back1.png"
+        height={300}
+        width={350}
+        alt="background Picture"
+        className={styles.pic2}
+      />
+
+      <section className={styles.section}>
+        {dataArr.map((value, index) => {
+          return <Paragraph key={index} data={value} />;
+        })}
+      </section>
     </main>
   );
 }
