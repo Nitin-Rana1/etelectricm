@@ -11,6 +11,33 @@
   .sell {
     height: 100vh;
     position: relative;
+    .menu {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 15vw;
+      z-index: 10;
+      background-color: white;
+      color: black;
+      padding: 1em 1em;
+      border-radius: 15px;
+      div {
+        margin-bottom: 1em;
+        padding: 0.5em 1em;
+        border-radius: 10px;
+        background-color: #d6dfe9;
+      }
+    }
+    .settingIcon {
+      width: 10vw;
+      height: 8vw;
+      position: absolute;
+      z-index: 10;
+      right: 3vw;
+      top: 5vw;
+      .humburger {
+      }
+    }
     button {
       position: absolute;
       bottom: 15vh;

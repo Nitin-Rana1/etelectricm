@@ -14,7 +14,7 @@ export default function Home() {
   const [showPopUp, setShowPopUp] = useState(false);
 
   useEffect(() => {
-    setTimeout(()=> setShowPopUp(true), 8000);
+    setTimeout(() => setShowPopUp(true), 8000);
   }, []);
   return (
     <div className={styles.container}>
@@ -24,16 +24,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main} id="home">
-        <PopUp open = {showPopUp} closing = {()=> setShowPopUp(false)}/>
-        <LandingFace />
-        <ChooseEV handleContactClick={()=> setShowPopUp(true)}/>
+        <PopUp open={showPopUp} closing={() => setShowPopUp(false)} />
+        <LandingFace handleContactClick={() => setShowPopUp(true)} />
+        <ChooseEV handleContactClick={() => setShowPopUp(true)} />
         <div id="Scooter">
-          <Scooter handleContactClick={()=> setShowPopUp(true)}/>
+          <Scooter handleContactClick={() => setShowPopUp(true)} />
         </div>
         <div id="Bike">
-        <Bike handleContactClick={()=> setShowPopUp(true)}/>
+          <Bike handleContactClick={() => setShowPopUp(true)} />
         </div>
-        <Footer handleContactClick={()=> setShowPopUp(true)}/>
+        <Footer handleContactClick={() => setShowPopUp(true)} />
       </main>
     </div>
   );
