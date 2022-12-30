@@ -8,7 +8,7 @@ export default function Photo() {
   const [go, setGo] = useState(false);
   useEffect(() => {
     setGo(true);
-  });
+  }, []);
   return (
     <main className={styles.photo}>
       {go &&
