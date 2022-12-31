@@ -54,7 +54,7 @@ export default function LandingPhoto({
           >
             <Link href="/gallery">Gallery</Link>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             whileHover={{
               scale: 1.1,
               backgroundColor: "#75a0d0",
@@ -62,7 +62,7 @@ export default function LandingPhoto({
             }}
           >
             About Us
-          </motion.div>
+          </motion.div> */}
           <motion.div
             whileHover={{
               scale: 1.1,

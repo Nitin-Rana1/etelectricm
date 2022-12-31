@@ -35,14 +35,16 @@ export default function Footer({
             <Link href="/gallery">
               <span>Gallery</span>
             </Link>
+            <Link href="/whychooseus">
+              <span>Why Choose Us</span>
+            </Link>
             <Link href="/">
               <span>Home</span>
             </Link>
-            <Link href="/aboutus">
+            {/* <Link href="/aboutus">
               <span>About Us</span>
-            </Link>
+            </Link> */}
             <span onClick={handleContactClick} className={styles.contact}>
-              {" "}
               Contact Us
             </span>
           </section>
