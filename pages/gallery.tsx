@@ -2,17 +2,13 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Bike from "../components/Bike";
-import ChooseEV from "../components/chooseEV";
 import Footer from "../components/Footer";
-import LandingFace from "../components/landingFace";
-import PopUp from "../components/PopUp";
-import Scooter from "../components/Scooter";
-import Para from "../components/whyChooseUs/para";
+import GalleryPics from "../components/gallery/galleryPics";
 import LandingPhoto from "../components/LandingPhoto";
-import styles from "../styles/WhyChooseUs.module.scss";
+import PopUp from "../components/PopUp";
+import styles from "../styles/Gallery.module.scss";
 
-export default function WhyChooseUs() {
+export default function Gallery() {
   const [showPopUp, setShowPopUp] = useState(false);
 
   // useEffect(() => {
@@ -25,14 +21,17 @@ export default function WhyChooseUs() {
         <meta name="description" content="Created By Nitin Rana" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.whyChooseUs}>
+      <main className={styles.gallery}>
         <PopUp open={showPopUp} closing={() => setShowPopUp(false)} />
         <LandingPhoto
-          mobileImg="/whyChooseUs/landingM.png"
-          desktopImg="/whyChooseUs/landingD.png"
+          mobileImg="/gallery/landingM.png"
+          desktopImg="/gallery/landingM.png"
           handleContactClick={() => setShowPopUp(true)}
         />
-        <Para />
+        <h1>Gallery</h1>
+        <section className={styles.images}>
+          <GalleryPics />
+        </section>
         <Footer handleContactClick={() => setShowPopUp(true)} type="other" />
       </main>
     </div>

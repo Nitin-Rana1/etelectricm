@@ -33,7 +33,7 @@ export default function Home() {
         <div id="Bike">
           <Bike handleContactClick={() => setShowPopUp(true)} />
         </div>
-        <Footer handleContactClick={() => setShowPopUp(true)} />
+        <Footer handleContactClick={() => setShowPopUp(true)} type="home" />
       </main>
     </div>
   );

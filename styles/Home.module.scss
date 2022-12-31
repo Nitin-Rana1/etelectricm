@@ -279,14 +279,43 @@
     }
   }
 }
-// height: 60vw;
-// p{
-// display: -webkit-box;
-// overflow: hidden;
-// -webkit-box-orient: vertical;
-// -webkit-line-clamp: 15;
-// }
-/* Extra small devices (phones, 600px and down) */
+.landingPhoto {
+  background-color: black;
+  height: 100vh;
+  position: relative;
+  .menu {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 15vw;
+    z-index: 10;
+    background-color: white;
+    color: black;
+    padding: 1em 1em;
+    border-radius: 15px;
+    div {
+      margin-bottom: 1em;
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      background-color: #d6dfe9;
+    }
+  }
+  // .settingIconHolder {
+  //   background-color: red;
+  //   padding: 2vw;
+  // }
+  .settingIcon {
+    width: 10vw;
+    height: 8vw;
+    position: absolute;
+    z-index: 10;
+    right: 3vw;
+    top: 5vw;
+    background-color: wheat;
+    .humburger {
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
 }
 

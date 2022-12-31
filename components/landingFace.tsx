@@ -67,6 +67,15 @@ function LandingFaceSell({
               transition: { duration: 0.3 },
             }}
           >
+            <Link href="/gallery">Gallery</Link>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#75a0d0",
+              transition: { duration: 0.3 },
+            }}
+          >
             About Us
           </motion.div>
           <motion.div
