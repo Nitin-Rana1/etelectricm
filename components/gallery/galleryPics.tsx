@@ -6,7 +6,7 @@ export default function GalleryPics() {
     <main className={styles.galleryPics}>
       {evsData.map((ev, i) => {
         return (
-          <div className={styles.pic}>
+          <div className={styles.pic} key={ev.brand + i}>
             <Image fill src={ev.imageUrl} alt={ev.brand + ev.name} />
           </div>
         );
