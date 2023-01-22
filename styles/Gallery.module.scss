@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   row-gap: 2vh;
-  //   padding: 0 2vw;
+  // padding: 5vw;
   .pic {
     position: relative;
     width: 34vw;
@@ -29,7 +29,7 @@
 @media only screen and (min-width: 768px) {
   .galleryPics {
     row-gap: 4vh;
-    //   padding: 0 2vw;
+    // padding: 0 10vw;
     .pic {
       width: 26vw;
       height: 30.5vw;

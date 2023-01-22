@@ -29,7 +29,7 @@ export default function Gallery() {
           handleContactClick={() => setShowPopUp(true)}
         />
         <h1>Gallery</h1>
-        <section className={styles.images}>
+        <section className={styles.imagesHolder}>
           <GalleryPics />
         </section>
         <Footer handleContactClick={() => setShowPopUp(true)} type="other" />

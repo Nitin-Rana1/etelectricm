@@ -1,9 +1,9 @@
 import { Button, Slider } from "@mui/material";
 import { ChangeEvent, useMemo, useState } from "react";
-import styles from "../styles/Home.module.scss";
+import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
-import evsData from "../data/evs";
+import evsData from "../../data/evs";
 const cardVariants: Variants = {
   offscreen: {
     y: 300,
@@ -25,14 +25,14 @@ function ScooterCard({
   title,
   brand,
   range,
-  handleContactClick
+  handleContactClick,
 }: {
   side: number;
   pic: string;
   title: string;
   brand: string;
   range: string;
-  handleContactClick: ()=> void;
+  handleContactClick: () => void;
 }) {
   return (
     <main className={styles.scooterCard}>
@@ -50,7 +50,11 @@ function ScooterCard({
         viewport={{ once: true, amount: 0.8 }}
         className={styles.imgContainer}
       >
-        <motion.div onClick={handleContactClick} className={styles.imgHolder} variants={cardVariants}>
+        <motion.div
+          onClick={handleContactClick}
+          className={styles.imgHolder}
+          variants={cardVariants}
+        >
           <Image src={pic} alt="ev pic" fill />
         </motion.div>
       </motion.div>

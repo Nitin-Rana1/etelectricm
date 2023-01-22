@@ -151,6 +151,7 @@
   }
   .ranges {
     .slider {
+      padding-right: 18vw;
     }
     padding: 0 8vw;
   }
@@ -412,6 +413,19 @@
     span,
     h2 {
       padding: 0 13em;
+    }
+  }
+  .rent,
+  .sell {
+    .menu {
+    }
+    .settingIcon {
+      width: 4vw !important;
+      height: 3.5vw !important;
+      right: 3vw;
+      top: 5vw;
+      .humburger {
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { Button } from "@mui/material";
-import styles from "../styles/Home.module.scss";
+import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 const cardVariantsLeft: Variants = {
@@ -37,17 +37,18 @@ function ChooseEvCard({
   pic,
   title,
   side,
-  handleContactClick
+  handleContactClick,
 }: {
   pic: string;
   title: string;
   side: string;
-  handleContactClick: ()=> void;
+  handleContactClick: () => void;
 }) {
   return (
-    <main className={styles.chooseEvCard} 
-    //  onClick={handleContactClick}
-     >
+    <main
+      className={styles.chooseEvCard}
+      //  onClick={handleContactClick}
+    >
       <a href={"#" + title}>
         <div className={styles.titleButton}>
           {title == "Bike" ? (
@@ -82,8 +83,6 @@ function ChooseEvCard({
           )}
         </motion.div>
 
-
-
         <div className={styles.viewMore}>
           <Button variant="contained">View More</Button>
         </div>
@@ -92,13 +91,27 @@ function ChooseEvCard({
   );
 }
 
-export default function ChooseEV({handleContactClick}:{handleContactClick: ()=> void}) {
+export default function ChooseEV({
+  handleContactClick,
+}: {
+  handleContactClick: () => void;
+}) {
   return (
     <motion.main className={styles.chooseEv}>
       <h2>Choose Your EV</h2>
       <section className={styles.bikeOrScooty}>
-        <ChooseEvCard handleContactClick={handleContactClick} pic="/ev/kinetic-green/s/zing.png" side="left" title="Scooter" />
-        <ChooseEvCard handleContactClick={handleContactClick} pic="/ev/joy-e-bike/b/beast.png" side="right" title="Bike" />
+        <ChooseEvCard
+          handleContactClick={handleContactClick}
+          pic="/ev/kinetic-green/s/zing.png"
+          side="left"
+          title="Scooter"
+        />
+        <ChooseEvCard
+          handleContactClick={handleContactClick}
+          pic="/ev/joy-e-bike/b/beast.png"
+          side="right"
+          title="Bike"
+        />
       </section>
     </motion.main>
   );

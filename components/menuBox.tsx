@@ -1,41 +1,20 @@
-import styles from "../styles/Home.module.scss";
-import Image from "next/image";
-import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useEffect, useState } from "react";
-import { setgroups } from "process";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import MenuBox from "./menuBox";
-export default function LandingPhoto({
-  mobileImg,
-  desktopImg,
-  // showMenu,
-  // handleShowMenu,
+import Image from "next/image";
+
+import styles from "../styles/Home.module.scss";
+export default function MenuBox({
+  showMenu,
   handleContactClick,
+  handleShowMenu,
 }: {
-  mobileImg: string;
-  desktopImg: string;
-  // showMenu: boolean;
-  // handleShowMenu: () => void;
+  showMenu: boolean;
   handleContactClick: () => void;
+  handleShowMenu: () => void;
 }) {
-  let onlyWidth = useWindowWidth();
-  const [go, setGo] = useState(false);
-  useEffect(() => {
-    setGo(true);
-  }, []);
-  const [showMenu, setShowMenu] = useState(false);
-  function handleShowMenu() {
-    setShowMenu(!showMenu);
-  }
   return (
-    <main className={styles.landingPhoto}>
-      <MenuBox
-        showMenu={showMenu}
-        handleContactClick={handleContactClick}
-        handleShowMenu={handleShowMenu}
-      />
-      {/* {showMenu && (
+    <main className={styles.menuBox}>
+      {showMenu && (
         <motion.div
           initial={{ x: -450, y: -200, rotate: 40 }}
           animate={{ x: 0, y: 0, rotate: 0 }}
@@ -92,23 +71,7 @@ export default function LandingPhoto({
             onClick={handleShowMenu}
           />
         </div>
-      </div> */}
-      {go &&
-        (onlyWidth < 768 ? (
-          <Image
-            className={styles.pic}
-            src={mobileImg}
-            alt="ev features"
-            fill
-          />
-        ) : (
-          <Image
-            className={styles.pic}
-            src={desktopImg}
-            alt="ev features"
-            fill
-          />
-        ))}
+      </div>
     </main>
   );
 }

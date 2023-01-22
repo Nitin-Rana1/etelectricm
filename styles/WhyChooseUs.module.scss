@@ -7,6 +7,7 @@
     }
     .section {
       position: relative;
+      // padding: 0 10vw;
     }
     .paragraph {
       padding: 2em 2.5em;
@@ -28,4 +29,44 @@
       right: -50px !important;
     }
   }
+}
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 0 10vw;
+  }
+  .pic1 {
+    // left: 0vw !important;
+    // top: 0px;
+  }
+  .pic2 {
+    bottom: 100px;
+    right: -50px !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .section {
+    padding: 0 20vw;
+  }
+  .pic1 {
+    left: 0vw !important;
+    // top: 0px;
+  }
+  .pic2 {
+    bottom: 100px;
+    right: -50px !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
